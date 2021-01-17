@@ -71,7 +71,7 @@
                         <th style="width: 150px">上映时间</th>
                         <th style="width: 120px">地区</th>
                         <th style="width: 55px">点击量</th>
-                        <th style="width: 230px">操作</th>
+                        <th style="width: 250px">操作</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -164,7 +164,7 @@
                                         </div>
                                     </div>
                                     <div class="layui-form-item">
-                                        <label class="layui-form-label" style="text-align: center;">影院：</label>
+                                        <label class="layui-form-label" style="text-align: center;">影厅选择：</label>
                                         <div class="layui-input-block" style="padding:8px">
                                         <c:forEach items="${halls}" var="hall">
                                             <input type="radio" name="hallobj" value="${hall.moviehallid}">${hall.moviehallname}
