@@ -1,5 +1,6 @@
 package com.zxl.controller.sys;
 
+import com.zxl.entity.Msm;
 import com.zxl.entity.TMoviehall;
 import com.zxl.service.TMoviehallService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +24,14 @@ public class SysMovieHallController {
         modelMap.addAttribute("halls",all);
         return "sysMovieHall";
     }
+
+    @RequestMapping("/previewSeats")
+    public String previewSeats(){
+//        Msm byId = tMovieorderService.findById(id);
+//        modelMap.addAttribute("msm",byId);
+        return "sys_preview_seat";
+    }
+
     @RequestMapping(value = "/add", method = RequestMethod.POST)
     public String add(TMoviehall tMoviehall){
         tMoviehallService.insert(tMoviehall);

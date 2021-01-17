@@ -92,7 +92,7 @@
                                 </c:if>
                             </td>
                             <td>
-                                <a href="${pageContext.request.contextPath}/sysHall/delete?id=${hall.moviehallid}"
+                                <a href="${pageContext.request.contextPath}/sysHall/previewSeats"
                                    class="layui-btn  layui-btn-success layui-btn-sm">预览</a>
                                 <c:if test="${hall.status == 1}">
                                     <a href="${pageContext.request.contextPath}/sysHall/updateStatus?id=${hall.moviehallid}&status=0"
