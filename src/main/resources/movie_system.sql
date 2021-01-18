@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50624
 File Encoding         : 65001
 
-Date: 2021-01-16 15:35:17
+Date: 2021-01-18 17:04:09
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -30,9 +30,10 @@ CREATE TABLE `persistent_logins` (
 -- ----------------------------
 -- Records of persistent_logins
 -- ----------------------------
-INSERT INTO `persistent_logins` VALUES ('zxl', '++Ws6KPVrGLTEHNsCMmUKQ==', 'mcOCq6Qng7zSgkEnqgjTZQ==', '2021-01-16 15:26:47');
+INSERT INTO `persistent_logins` VALUES ('zxl', '++Ws6KPVrGLTEHNsCMmUKQ==', 'tprCNibIS9sTDj8CgeEqoQ==', '2021-01-16 20:38:46');
 INSERT INTO `persistent_logins` VALUES ('zm', '74QNfx/hSr+pza3UTdxdKQ==', 'mihQAm1+rkaaIsstfe1KtA==', '2020-10-26 18:46:26');
 INSERT INTO `persistent_logins` VALUES ('admin', 'q/SCrBuuh5Xh8hapBiebAA==', 'llzEurUkhuEFbMZbpjlUrQ==', '2020-12-26 19:42:58');
+INSERT INTO `persistent_logins` VALUES ('zxl', 'z5BZA2usEMge0eufVtqAvA==', 'pTa7ccBScXnYhmNFys5z5w==', '2021-01-18 17:01:33');
 
 -- ----------------------------
 -- Table structure for t_comment
@@ -142,7 +143,7 @@ INSERT INTO `t_movie` VALUES ('8', '我和我的家乡', '/static/image/p2620453
 INSERT INTO `t_movie` VALUES ('11', '我不是药神', '/static/image/p2561305376.jpg', '文牧野', ' 徐峥 / 王传君 / 周一围 / 谭卓 / 章宇 /', '117', '中国大陆', '2020-08-15', '40', '27', '普通中年男子程勇（徐峥 饰）经营着一家保健品店，失意又失婚。不速之客吕受益（王传君 饰）的到来，让他开辟了一条去印度买药做“代购”的新事业，虽然困难重重，但他在这条“买药之路”上发现了商机，一发不可收拾地做起了治疗慢粒白血病的印度仿制药独家代理商。赚钱的同时，他也认识了几个病患及家属，为救女儿被迫做舞女的思慧（谭卓 饰）、说一口流利“神父腔”英语的刘牧师（杨新鸣 饰），以及脾气暴烈的“黄毛”（章宇 饰），几个人合伙做起了生意，利润倍增的同时也危机四伏。程勇昔日的小舅子曹警官（周一围 饰）奉命调查仿制药的源头，假药贩子张长林（王砚辉 饰）和瑞士正牌医药代表（李乃文 饰）也对其虎视眈眈，生意逐渐变成了一场关于救赎的拉锯战。\r\n　　本片改编自慢粒白血病患者陆勇代购抗癌药的真实事迹。');
 INSERT INTO `t_movie` VALUES ('22', '我和我的祖国', '/static/image/p2567998580.jpg', ' 陈凯歌 / 张一白···', '黄渤 / 张译 / 韩昊霖 / 杜江 / 葛优', '155', '中国大陆', '2019-09-30 00:00:00', '30', '4', '七位导演分别取材新中国成立70周年以来，祖国经历的无数个历史性经典瞬间。讲述普通人与国家之间息息相关密不可分的动人故事。聚焦大时代大事件下，小人物和国家之间，看似遥远实则密切的关联，唤醒全球华人共同回忆。');
 INSERT INTO `t_movie` VALUES ('25', '八佰', '/static/image/p2615992304.jpg', '管虎', '王千源 / 张译 / 姜武 / 黄志忠 / 张俊', '147', '中国大陆', '2020-08-21 00:00:00', '45', '78', '1937年淞沪会战的最后一役，“八百壮士”奉命坚守上海四行仓库，以少敌多顽强抵抗四天四夜。电影《八佰》由管虎导演，是亚洲首部全片使用IMAX摄影机拍摄的商业电影，将于2020年8月21日全国影院上映。');
-INSERT INTO `t_movie` VALUES ('34', '半个喜剧 ', '/static/image/a_half _comedy.jpg', ' 周申 刘露', '任素汐 饰 莫默 吴昱翰 饰 孙同 刘迅 饰 郑多多 汤敏 饰 高璐', '111', '中国大陆', '2020-10-25 19:56:00', '35', '7', '三个自由浪漫的年轻人，过着各怀心思的人生：有人急着摆脱单身，有人想在结婚前放荡一番，有人想在 大城市站稳脚跟。因为一次情感出轨，三人扭结成了一团“嬉笑怒骂”的乱麻。当各种价值观碰撞在一起， 当一个人需要平衡亲情友情与爱情......他们慌乱的生活，就像是半个喜剧。');
+INSERT INTO `t_movie` VALUES ('34', '半个喜剧 ', '/static/image/a_half _comedy.jpg', ' 周申 刘露', '任素汐 饰 莫默 吴昱翰 饰 孙同 刘迅 饰 郑多多 汤敏 饰 高璐', '111', '中国大陆', '2020-10-25 19:56:00', '35', '8', '三个自由浪漫的年轻人，过着各怀心思的人生：有人急着摆脱单身，有人想在结婚前放荡一番，有人想在 大城市站稳脚跟。因为一次情感出轨，三人扭结成了一团“嬉笑怒骂”的乱麻。当各种价值观碰撞在一起， 当一个人需要平衡亲情友情与爱情......他们慌乱的生活，就像是半个喜剧。');
 INSERT INTO `t_movie` VALUES ('37', '鼠胆英雄', '/static/image/shudanyingxiong.jpg', ' 束焕 邵丹', ' 岳云鹏 饰 闫大海 佟丽娅 饰 杜卿 田雨 饰 赵瀚青 袁弘 饰 邢铁城 大鹏 饰 枪神', '105', '中国大陆', '2020-10-07 14:00:00', '40', '4', '三十年代的上海滩，胆小如鼠的青龙帮小弟闫大海发现自己身患绝症之际，竟阴差阳错当上了警察。为了给梦中女神--飞乐门舞女杜卿挣赎身钱，他计划在自己生命中所剩不多的时间里因公殉职，从而拿到抚恤金拯救女神。然而，在他疯狂执行铲除“黑帮”、“毒枭”任务以身赴死期间，却总是事与愿违求死不得死，反而得到屡屡升迁。然而，纸醉金迷的上海滩，还隐藏着更大的危机…\r\n ');
 INSERT INTO `t_movie` VALUES ('39', '老师好', '/static/image/laoshihao.jpg', ' 张栾', ' 于谦 饰 苗宛秋 汤梦佳 饰 安静 秦鸣悦 饰 关婷婷 ', '113', '中国大陆', '2020-10-14 21:00:00', '56', '6', '1985年的南宿一中，苗宛秋老师推自行车昂首走在校园，接受着人们艳羡的目光和纷至沓来的恭维。桀傲不驯的洛小乙、温婉可人的安静、新潮前卫的关婷婷、大智若愚的脑袋、舞痴兄弟文明建设、八婆海燕、奸商耗子……三班是一个永远也不缺故事的集体。苗宛秋怎么也不会想到，他即将走进的这个三班将会成为他以及他身边这辆自行车的噩梦。三班的同学也没有想到，这位新来的老师改变了他们的一生。');
 INSERT INTO `t_movie` VALUES ('40', '陈翔六点半', '/static/image/chongloubie.jpg', ' 陈翔', ' 毛台 饰 刘君山 冷檬 饰 段晓蓝 妹大爷 饰 姜大爷 陈翔 饰 鼓手', '121', '中国大陆', '2020-10-14 17:00:00', '47', '4', '地方戏曲演员刘馆长和几个弟子一起经营着一家戏馆，戏馆收入微薄，每天只有几个逃票进来的老头，为了维持戏馆生存，刘馆长想尽办法，但收效甚微，他们的生活也陷入了窘境。 有一天，戏馆出现了一个年轻漂亮的姑娘段晓蓝，她是戏馆唯一的年轻观众，也成为了戏馆的希望。这期间，因为偶然事件，段晓蓝身上有了解开戏馆困局的办法，为了能让戏馆延续下去，他们带上这唯一的年轻女观众，开始了一段妙趣横生又曲折离奇的疗伤之旅……');
@@ -228,38 +229,40 @@ CREATE TABLE `t_schedule` (
   `hallObj` int(11) NOT NULL COMMENT '????Ӱ??',
   `scheduleDate` varchar(20) DEFAULT NULL COMMENT '??ӳ????',
   `scheduleTime` varchar(20) NOT NULL COMMENT '??ӳʱ??',
+  `seatRule` int(8) DEFAULT '1' COMMENT '选座规则 1-都可选 2-单排单号可选 3-单排双号可选',
   PRIMARY KEY (`scheduleId`),
   KEY `movieObj` (`movieObj`),
   KEY `hallObj` (`hallObj`),
   CONSTRAINT `t_schedule_ibfk_1` FOREIGN KEY (`movieObj`) REFERENCES `t_movie` (`movieId`),
   CONSTRAINT `t_schedule_ibfk_2` FOREIGN KEY (`hallObj`) REFERENCES `t_moviehall` (`movieHallId`)
-) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of t_schedule
 -- ----------------------------
-INSERT INTO `t_schedule` VALUES ('1', '1', '1', '2020-08-15', '8:00');
-INSERT INTO `t_schedule` VALUES ('2', '2', '1', '2020-08-15', '10:00');
-INSERT INTO `t_schedule` VALUES ('3', '3', '2', '2020-08-15', '9:00');
-INSERT INTO `t_schedule` VALUES ('4', '4', '1', '2020-0815', '15:00');
-INSERT INTO `t_schedule` VALUES ('5', '5', '2', '2020-08-15', '14:00');
-INSERT INTO `t_schedule` VALUES ('6', '6', '2', '2020-08-15', '18:00');
-INSERT INTO `t_schedule` VALUES ('7', '8', '1', '2020-10-18', '20:00:00');
-INSERT INTO `t_schedule` VALUES ('9', '7', '1', '2020-10-20', '15:00:00');
-INSERT INTO `t_schedule` VALUES ('10', '11', '2', '2020-10-23', '16:00:00');
-INSERT INTO `t_schedule` VALUES ('13', '22', '1', '2020-10-29', '00:00:00');
-INSERT INTO `t_schedule` VALUES ('14', '25', '1', '2020-10-30', '00:00:00');
-INSERT INTO `t_schedule` VALUES ('16', '47', '2', '2020-11-26', '14:00:00');
-INSERT INTO `t_schedule` VALUES ('17', '46', '2', '2020-11-26', '20:00:00');
-INSERT INTO `t_schedule` VALUES ('18', '45', '2', '2020-10-30', '11:00:00');
-INSERT INTO `t_schedule` VALUES ('19', '44', '2', '2020-11-27', '21:00:00');
-INSERT INTO `t_schedule` VALUES ('20', '43', '2', '2020-10-26', '10:29:36');
-INSERT INTO `t_schedule` VALUES ('21', '42', '2', '2020-10-26', '08:00:00');
-INSERT INTO `t_schedule` VALUES ('22', '41', '2', '2020-10-26', '10:30:29');
-INSERT INTO `t_schedule` VALUES ('23', '40', '2', '2020-11-26', '20:00:00');
-INSERT INTO `t_schedule` VALUES ('24', '39', '2', '2020-10-26', '10:31:13');
-INSERT INTO `t_schedule` VALUES ('25', '37', '2', '2020-12-26', '00:00:00');
-INSERT INTO `t_schedule` VALUES ('27', '48', '4', '2021-01-15', '00:00:00');
+INSERT INTO `t_schedule` VALUES ('1', '1', '1', '2020-08-15', '8:00', null);
+INSERT INTO `t_schedule` VALUES ('2', '2', '1', '2020-08-15', '10:00', null);
+INSERT INTO `t_schedule` VALUES ('3', '3', '2', '2020-08-15', '9:00', null);
+INSERT INTO `t_schedule` VALUES ('4', '4', '1', '2020-0815', '15:00', null);
+INSERT INTO `t_schedule` VALUES ('5', '5', '2', '2020-08-15', '14:00', null);
+INSERT INTO `t_schedule` VALUES ('6', '6', '2', '2020-08-15', '18:00', null);
+INSERT INTO `t_schedule` VALUES ('7', '8', '1', '2020-10-18', '20:00:00', null);
+INSERT INTO `t_schedule` VALUES ('9', '7', '1', '2020-10-20', '15:00:00', null);
+INSERT INTO `t_schedule` VALUES ('10', '11', '2', '2020-10-23', '16:00:00', null);
+INSERT INTO `t_schedule` VALUES ('13', '22', '1', '2020-10-29', '00:00:00', null);
+INSERT INTO `t_schedule` VALUES ('14', '25', '1', '2020-10-30', '00:00:00', null);
+INSERT INTO `t_schedule` VALUES ('16', '47', '2', '2020-11-26', '14:00:00', null);
+INSERT INTO `t_schedule` VALUES ('17', '46', '2', '2020-11-26', '20:00:00', null);
+INSERT INTO `t_schedule` VALUES ('18', '45', '2', '2020-10-30', '11:00:00', null);
+INSERT INTO `t_schedule` VALUES ('19', '44', '2', '2020-11-27', '21:00:00', null);
+INSERT INTO `t_schedule` VALUES ('20', '43', '2', '2020-10-26', '10:29:36', null);
+INSERT INTO `t_schedule` VALUES ('21', '42', '2', '2020-10-26', '08:00:00', null);
+INSERT INTO `t_schedule` VALUES ('22', '41', '2', '2020-10-26', '10:30:29', null);
+INSERT INTO `t_schedule` VALUES ('23', '40', '2', '2020-11-26', '20:00:00', null);
+INSERT INTO `t_schedule` VALUES ('24', '39', '2', '2020-10-26', '10:31:13', null);
+INSERT INTO `t_schedule` VALUES ('25', '37', '2', '2020-12-26', '00:00:00', null);
+INSERT INTO `t_schedule` VALUES ('27', '48', '4', '2021-01-15', '00:00:00', null);
+INSERT INTO `t_schedule` VALUES ('28', '34', '1', '2021-01-18', '00:00:00', '2');
 
 -- ----------------------------
 -- Table structure for t_sort

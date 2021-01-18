@@ -57,7 +57,10 @@ div.seatCharts-seat.unavailable {
 	background-color: red;
 	cursor: not-allowed;
 }
-
+div.seatCharts-seat.unallowchoose {
+	background-color: #472B34;
+	cursor: not-allowed;
+}
 ul.seatCharts-legendList {
 	list-style: none;
 }

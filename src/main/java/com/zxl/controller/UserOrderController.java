@@ -28,6 +28,11 @@ public class UserOrderController {
     @Autowired
     private TUserinfoService tUserinfoService;
 
+    /**
+     * 当前场次电影售票信息
+     * @param id
+     * @return
+     */
     @RequestMapping("/addajax")
     public @ResponseBody
             Msm addajax(Integer id){
@@ -35,13 +40,32 @@ public class UserOrderController {
         System.out.println(id);
         return byId;
     }
+
+    /**
+     * 购票时初始化页面
+     * @param id
+     * @param modelMap
+     * @return
+     */
     @RequestMapping("/add")
     public String add(Integer id,ModelMap modelMap){
         Msm byId = tMovieorderService.findById(id);
         modelMap.addAttribute("msm",byId);
+        if (2 == byId.getSeatRule()) {
+            modelMap.addAttribute("chooseRule", "单排单号");
+        } else if (3 == byId.getSeatRule()) {
+            modelMap.addAttribute("chooseRule", "单排双号");
+        } else {
+            modelMap.addAttribute("chooseRule", "均可选择");
+        }
         return "seat";
     }
 
+    /**
+     * 购票
+     * @param msm
+     * @return
+     */
     @RequestMapping("/buy")
     public String buy(Msm msm){
         tMovieorderService.insert(msm);

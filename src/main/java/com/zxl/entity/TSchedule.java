@@ -26,6 +26,11 @@ public class TSchedule implements Serializable {
 
     private TMovie tMovie;
 
+    /**
+     * 选座规则 1-都可选 2-单排单号可选 3-单排双号可选
+     */
+    private Integer seatRule;
+
     public TMovie gettMovie() {
         return tMovie;
     }
@@ -82,6 +87,14 @@ public class TSchedule implements Serializable {
         this.scheduletime = scheduletime;
     }
 
+    public Integer getSeatRule() {
+        return seatRule;
+    }
+
+    public void setSeatRule(Integer seatRule) {
+        this.seatRule = seatRule;
+    }
+
     @Override
     public String toString() {
         return "TSchedule{" +
@@ -90,6 +103,7 @@ public class TSchedule implements Serializable {
                 ", hallobj=" + hallobj +
                 ", scheduledate='" + scheduledate + '\'' +
                 ", scheduletime='" + scheduletime + '\'' +
+                ", seatRule='" + seatRule + '\'' +
                 ", moviehalls=" + moviehalls +
                 '}';
     }

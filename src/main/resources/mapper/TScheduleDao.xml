@@ -92,8 +92,8 @@
 
     <!--新增所有列-->
     <insert id="insert" keyProperty="scheduleid" useGeneratedKeys="true">
-        insert into t_schedule(movieObj, hallObj, scheduleDate, scheduleTime)
-        values (#{movieobj}, #{hallobj}, #{scheduledate}, #{scheduletime})
+        insert into t_schedule(movieObj, hallObj, scheduleDate, scheduleTime, seatRule)
+        values (#{movieobj}, #{hallobj}, #{scheduledate}, #{scheduletime}, #{seatRule})
     </insert>
 
     <!--通过主键修改数据-->

@@ -35,6 +35,7 @@
                 <ul class="book-left">
                     <li>电影名字: </li>
                     <li>放映时间: </li>
+                    <li>选座规则:</li>
                     <li>数量:</li>
                     <li>总价:</li>
                     <li>座位:</li>
@@ -42,6 +43,7 @@
                 <ul class="book-right">
                     <li>${msm.movieName}</li>
                     <li>${msm.scheduleDate} ${msm.scheduleTime}</li>
+                    <li>${chooseRule}</li>
                     <li><span id="counter">0</span></li>
                     <li><b><i>￥</i><span id="total">0</span></b></li>
                 </ul>
@@ -80,6 +82,9 @@
         $seatCol = 0;
         var $map = [];
         var $columns = [];
+        // 选座规则 1-都可选 2-单排单号可选 3-单排双号可选
+        $seatRule = 1;
+        $unchoose = [];
         // Ajax
         function loadXMLDoc(){
             var xmlhttp;
@@ -107,7 +112,9 @@
                     price = resText.price;
                     $seatRow = resText.rows;
                     $seatCol = resText.cols;
-
+                    if (resText.seatRule) {
+                        $seatRule = resText.seatRule;
+                    }
                     if ($seatRow > 0 && $seatCol > 0) {
                         for(var i=0;i<$seatRow;i++){
                             $map[i]="";
@@ -116,6 +123,15 @@
                                     $map[i]+="_";
                                 } else {
                                     $map[i]+="a";
+                                }
+                                if ($seatRule === 2) {
+                                    if (j%2 !== 0) {
+                                        $unchoose.push(i+1 + "_" + (j+1));
+                                    }
+                                } else if ($seatRule === 3) {
+                                    if (j%2 == 0) {
+                                        $unchoose.push(i+1 + "_" + (j+1));
+                                    }
                                 }
                             }
                         }
@@ -132,9 +148,15 @@
                     }
                     console.log($columns)
                     console.log($map)
+                    console.log($unchoose);
+
                     initSeatCharts();
-                    for (let i = 0; i < $unavaarr.length; i++) {
+                    for (var i = 0; i < $unavaarr.length; i++) {
                         sc.get($unavaarr[i]).status('unavailable');
+                    }
+
+                    for (var i = 0; i < $unchoose.length; i++) {
+                        sc.get($unchoose[i]).status('unallowchoose');
                     }
                 }
             };
@@ -151,7 +173,6 @@
         //initSeatCharts();
         loadXMLDoc();
 
-        console.log('jiazai');
         function initSeatCharts() {
             sc = $('#seat-map').seatCharts({
                 map: $map,
@@ -167,6 +188,7 @@
                 legend : { //Definition legend
                     node : $('#legend'),
                     items : [
+                        [ 'a', 'unallowchoose', '不可选择'],
                         [ 'a', 'available',   '可购买' ],
                         [ 'a', 'unavailable', '已购买'],
                         [ 'a', 'selected', '已选择']

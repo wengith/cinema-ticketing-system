@@ -25,9 +25,14 @@ public class Msm {
     private Integer rows;
 
     private  String rowsIndex;
-
+    /**
+     * 场次ID
+     */
     private Integer scheduleId;
-
+    /**
+     * 选座规则
+     */
+    private Integer seatRule;
 
     public Integer getScheduleId() {
         return scheduleId;
@@ -125,6 +130,14 @@ public class Msm {
         this.movieHallName = movieHallName;
     }
 
+    public Integer getSeatRule() {
+        return seatRule;
+    }
+
+    public void setSeatRule(Integer seatRule) {
+        this.seatRule = seatRule;
+    }
+
     @Override
     public String toString() {
         return "Msm{" +
@@ -139,6 +152,7 @@ public class Msm {
                 ", cols='" + cols + '\'' +
                 ", rowsIndex='" + rowsIndex + '\'' +
                 ", scheduleId=" + scheduleId +
+                ", seatRule=" + seatRule +
                 '}';
     }
 }

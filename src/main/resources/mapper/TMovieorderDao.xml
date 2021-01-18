@@ -122,7 +122,8 @@
                tmh.movieHallId,
                tmh.movieHallName,
                tmh.cols,
-               tmh.rows
+               tmh.rows,
+               ts.seatRule
         FROM t_movie tm
                  JOIN t_schedule ts ON tm.movieId = ts.movieObj
                  JOIN t_moviehall tmh ON ts.hallObj = tmh.movieHallId

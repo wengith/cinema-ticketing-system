@@ -174,9 +174,9 @@
                                     <div class="layui-form-item">
                                         <label class="layui-form-label" style="text-align: center;">座位规则：</label>
                                         <div class="layui-input-block" style="padding:8px">
-                                            <input type="radio" name="selseatobj" value="单排单数可选">单排单数可选
-                                            <input type="radio" name="selseatobj" value="单排双数可选">单排双数可选
-                                            <input type="radio" name="selseatobj" value="全部可选">全部可选
+                                            <input type="radio" name="seatRule" value="1">全部可选
+                                            <input type="radio" name="seatRule" value="2">单排单数可选
+                                            <input type="radio" name="seatRule" value="3">单排双数可选
                                         </div>
                                     </div>
                                     <div class="layui-form-item">
