@@ -59,6 +59,11 @@
         }
 
     </style>
+    <%
+        String raw=request.getParameter("raw");
+        String clu=request.getParameter("clu");
+         out.print("raw:  "+raw);//打印到页面参数值
+    %>
 
 </head>
 
@@ -75,28 +80,25 @@
                 </div>
                 <div class="booking-details">
                     <ul class="book-left">
-                        <li>电影名字: </li>
-                        <li>放映时间: </li>
-                        <li>数量:</li>
-                        <li>总价:</li>
-                        <li>座位:</li>
+                        <li>影厅名字: </li>
+                        <li>排数:</li>
+                        <li>列数:</li>
                     </ul>
                     <ul class="book-right">
-                        <li>电影名字</li>
-                        <li>放映时间</li>
-                        <li><span id="counter">0</span></li>
-                        <li><b><i>￥</i><span id="total">0</span></b></li>
+                        <li>${hall}</li>
+                        <li><span id="counter">${raw}</span></li>
+                        <li><span id="total2">${clu}</span></li>
                     </ul>
                     <div class="clear"></div>
                     <ul id="selected-seats" class="scrollbar scrollbar1"></ul>
 
-                    <form action="${pageContext.request.contextPath}/userorder/buy">
-                        <input type="hidden" id="scheduleId" name="scheduleId">
-                        <input type="hidden" id="form-input" name="rc">
-                        <input type="hidden" id="price" name="price">
-                        <button class="checkout-button" id="sub-btn" type="submit">购买</button>
-                    </form>
-                    <div id="legend"></div>
+<%--                    <form action="${pageContext.request.contextPath}/userorder/buy">--%>
+<%--                        <input type="hidden" id="scheduleId" name="scheduleId">--%>
+<%--                        <input type="hidden" id="form-input" name="rc">--%>
+<%--                        <input type="hidden" id="price" name="price">--%>
+<%--                        <button class="checkout-button" id="sub-btn" type="submit">购买</button>--%>
+<%--                    </form>--%>
+<%--                    <div id="legend"></div>--%>
                 </div>
                 <div style="clear:both"></div>
             </div>
@@ -121,9 +123,9 @@
         $scheduleId = 0;
 
         // 影厅排数
-        $seatRow = 10;
+        $seatRow = <%=raw %>;
         // 影厅列数
-        $seatCol = 10;
+        $seatCol = <%=clu %>;
         var $map = [];
         var $columns = [];
         // Ajax

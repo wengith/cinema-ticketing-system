@@ -26,9 +26,11 @@ public class SysMovieHallController {
     }
 
     @RequestMapping("/previewSeats")
-    public String previewSeats(){
+    public String previewSeats(Integer raw,Integer clu,String hall,ModelMap modelMap){
 //        Msm byId = tMovieorderService.findById(id);
-//        modelMap.addAttribute("msm",byId);
+        modelMap.addAttribute("raw",raw);
+        modelMap.addAttribute("clu",clu);
+        modelMap.addAttribute("hall",hall);
         return "sys_preview_seat";
     }
 
