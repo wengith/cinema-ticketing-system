@@ -6,7 +6,7 @@
     <div class="input" id="navbar">
         <div class="logo">
             <a href="${pageContext.request.contextPath}/movies/home">
-                <img src="${pageContext.request.contextPath}/static/image/09.png" alt="">
+                <img src="${pageContext.request.contextPath}/static/image/09.jpg" alt="">
             </a>
         </div>
         <div class="input-container">

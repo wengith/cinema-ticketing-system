@@ -5,7 +5,7 @@
 <html>
 <head>
     <title>首页</title>
-    <link rel="shortcut icon" type="image/x-icon" href="${pageContext.request.contextPath}/static/image/07.ico" media="screen" />
+    <link rel="shortcut icon" type="image/x-icon" href="${pageContext.request.contextPath}/static/image/071.ico" media="screen" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet"
@@ -35,13 +35,13 @@
     <!-- 轮播图片 -->
     <div class="carousel-inner" style="width: 100%; height: 100%;">
         <div class="carousel-item active" style="width: 100%; height: 100%;">
-            <img src="${pageContext.request.contextPath}/static/image/heibao.jpg" style="width: 100%; height: 100%;">
+            <img src="${pageContext.request.contextPath}/static/image/xiaoyuanwang3.jpg" style="width: 100%; height: 100%;">
         </div>
         <div class="carousel-item">
-            <img src="${pageContext.request.contextPath}/static/image/fulian.jpg">
+            <img src="${pageContext.request.contextPath}/static/image/wangluo.jpg">
         </div>
         <div class="carousel-item">
-            <img src="${pageContext.request.contextPath}/static/image/zhizhuxia.jpg">
+            <img src="${pageContext.request.contextPath}/static/image/chenmo.jpg">
         </div>
     </div>
 
@@ -54,16 +54,16 @@
     </a>
     -->
 
-    <div class="top">
-        <ul>
-            <h3 class="ul_h3">热播</h3>
-            <c:forEach items="${movies}" var="movie">
-                <li>
-                    <a href="${pageContext.request.contextPath}/movies/findById?id=${movie.movieid}">${movie.moviename}</a>
-                </li>
-            </c:forEach>
-        </ul>
-    </div>
+<%--    <div class="top">--%>
+<%--        <ul>--%>
+<%--            <h3 class="ul_h3">热播</h3>--%>
+<%--            <c:forEach items="${movies}" var="movie">--%>
+<%--                <li>--%>
+<%--                    <a href="${pageContext.request.contextPath}/movies/findById?id=${movie.movieid}">${movie.moviename}</a>--%>
+<%--                </li>--%>
+<%--            </c:forEach>--%>
+<%--        </ul>--%>
+<%--    </div>--%>
 </div>
 
 
