@@ -127,8 +127,8 @@
             , admin = layui.admin
             , element = layui.element;
 
-        $("#open").on('click', function () {
-            layer.open({
+       $("#open").on('click', function () {
+           var open_index =  layer.open({
                 title: '选择分类'
                 , type: 1
                 , shadeClose: true
@@ -159,17 +159,21 @@
                                     <div>
                                         <div style="width:100px" class="div-right">
                                             <button class="layui-btn layui-btn-sm layui-btn-normal" type="submit">提交<button/>
-                                            <button class="layui-btn layui-btn-sm layui-btn-normal">取消<button/>
+                                            <a class="layui-btn layui-btn-sm layui-btn-normal" onclick="formClose();">取消<a/>
                                         <div/>
                                     <div/>
                                 <form/>`
 
             })
+           window.formClose = function(){
+               layer.close(open_index);     //执行关闭
+           }
         })
     });
 </script>
 
 <script>
+
     layui.config({
         base: '${pageContext.request.contextPath}/static/layuiadmin/' //静态资源所在路径
     }).extend({

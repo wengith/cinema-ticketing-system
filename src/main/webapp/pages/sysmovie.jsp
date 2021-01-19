@@ -149,7 +149,7 @@
             , laydate = layui.laydate;
 
         $(".sj").on('click', function () {
-            layer.open({
+            var open_index =  layer.open({
                 title: '选择分类'
                 , type: 1
                 , shadeClose: true
@@ -188,12 +188,15 @@
                                     <div>
                                         <div style="width:100px" class="div-right">
                                             <button class="layui-btn layui-btn-sm layui-btn-normal" type="submit">提交<button/>
-                                            <button class="layui-btn layui-btn-sm layui-btn-normal">取消<button/>
+                                            <a class="layui-btn layui-btn-sm layui-btn-normal" onclick="formClose();">取消<a/>
                                         <div/>
                                     <div/>
                                 <form/>`
 
             })
+            window.formClose = function(){
+                layer.close(open_index);     //执行关闭
+            }
             laydate.render({
                 elem: '#test1' //指定元素
                 , type: 'datetime'

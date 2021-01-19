@@ -51,7 +51,9 @@ public class UserOrderController {
     public String add(Integer id,ModelMap modelMap){
         Msm byId = tMovieorderService.findById(id);
         modelMap.addAttribute("msm",byId);
-        if (2 == byId.getSeatRule()) {
+        if (byId.getSeatRule() == null) {
+            modelMap.addAttribute("chooseRule", "均可选择");
+        } else if (2 == byId.getSeatRule()) {
             modelMap.addAttribute("chooseRule", "单排单号");
         } else if (3 == byId.getSeatRule()) {
             modelMap.addAttribute("chooseRule", "单排双号");

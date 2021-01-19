@@ -44,7 +44,10 @@ public class SysMoviesController {
         Integer count = tMovieService.findCount();
         Page page1=new Page(pageSize,page,count);
 
-        List<TMoviehall> all = tMoviehallService.findAll(null);
+        // 只可选择开放的影厅
+        TMoviehall moviehall = new TMoviehall();
+        moviehall.setStatus(1);
+        List<TMoviehall> all = tMoviehallService.findAll(moviehall);
         modelMap.addAttribute("movies",pageInfo);
         modelMap.addAttribute("pages",page1);
         modelMap.addAttribute("halls",all);
