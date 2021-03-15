@@ -70,8 +70,7 @@
                                 </form>
                             </c:if>
                             <c:if test="${order.status == 0}">
-                                <form action="${pageContext.request.contextPath}/pay">
-
+                                <form action="${pageContext.request.contextPath}/virtualPay">
                                     <input type="hidden" name="WIDout_trade_no" value="${order.orderid}">
                                     <input type="hidden" name="WIDsubject" value="${order.tMovie.moviename}">
                                     <input type="hidden" name="WIDtotal_amount" value="${order.price}">
