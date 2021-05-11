@@ -7,6 +7,7 @@ import com.zxl.entity.TMovieorder;
 import com.zxl.dao.TMovieorderDao;
 import com.zxl.service.TMovieorderService;
 import com.zxl.utils.DateUtils;
+import com.zxl.vo.BoxOfficeVo;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
@@ -139,5 +140,14 @@ public class TMovieorderServiceImpl implements TMovieorderService {
         userName="%"+userName+"%";
         PageHelper.startPage(page,pageSize);
         return tMovieorderDao.findSome(orderid,userName);
+    }
+
+    /**
+     * 计算电影售票票房
+     * @return
+     */
+    @Override
+    public List<BoxOfficeVo> calculateBoxOffice() {
+        return tMovieorderDao.countBoxOffice();
     }
 }

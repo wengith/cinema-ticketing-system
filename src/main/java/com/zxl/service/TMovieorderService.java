@@ -2,6 +2,7 @@ package com.zxl.service;
 
 import com.zxl.entity.Msm;
 import com.zxl.entity.TMovieorder;
+import com.zxl.vo.BoxOfficeVo;
 
 import java.util.List;
 
@@ -83,4 +84,10 @@ public interface TMovieorderService {
     TMovieorder details(Integer id);
 
     List<TMovieorder> findSome(Integer page, Integer pageSize, Integer orderid,String userName);
+
+    /**
+     * 计算电影售票票房
+     * @return
+     */
+    List<BoxOfficeVo> calculateBoxOffice();
 }

@@ -61,6 +61,7 @@
                                 <dd><a href="${pageContext.request.contextPath}/sysOrder/findAll?page=1&pageSize=8">订单管理</a></dd>
                                 <dd><a href="${pageContext.request.contextPath}/sysComment/findAll?page=1&pageSize=8">评论管理</a></dd>
                                 <dd><a href="${pageContext.request.contextPath}/sysSort/findAll?page=1&pageSize=5">标签管理</a></dd>
+                                <dd><a href="${pageContext.request.contextPath}/sysOrder/boxOffice">票房可视化</a></dd>
                             </dl>
                         </li>
                         <li data-name="app" class="layui-nav-item">

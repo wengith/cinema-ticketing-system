@@ -2,6 +2,7 @@ package com.zxl.dao;
 
 import com.zxl.entity.Msm;
 import com.zxl.entity.TMovieorder;
+import com.zxl.vo.BoxOfficeVo;
 import org.apache.ibatis.annotations.Param;
 import org.omg.CORBA.INTERNAL;
 import org.springframework.security.core.parameters.P;
@@ -101,4 +102,6 @@ public interface TMovieorderDao {
     TMovieorder details(Integer id);
 
     List<TMovieorder> findSome(@Param("orderid") Integer orderid,@Param("userName") String userName);
+
+    List<BoxOfficeVo> countBoxOffice();
 }

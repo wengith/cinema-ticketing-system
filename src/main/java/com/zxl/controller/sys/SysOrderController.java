@@ -2,13 +2,16 @@ package com.zxl.controller.sys;
 
 import com.github.pagehelper.PageInfo;
 import com.zxl.entity.TMovieorder;
+import com.zxl.entity.TSort;
 import com.zxl.service.TMovieorderService;
 import com.zxl.utils.Page;
+import com.zxl.vo.BoxOfficeVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
 
@@ -62,5 +65,22 @@ public class SysOrderController {
         TMovieorder details = tMovieorderService.details(id);
         modelMap.addAttribute("details", details);
         return "sys_details";
+    }
+
+
+    @RequestMapping("/boxOffice")
+    public String boxOfficeVisualizing(){
+        return "boxOfficeVisualizing";
+    }
+
+    /**
+     * 计算电影票房
+     * @return
+     */
+    @RequestMapping("/calculateBoxOffice")
+    @ResponseBody
+    public List<BoxOfficeVo> calculateBoxOffice(){
+        List<BoxOfficeVo> boxOfficeVoList = tMovieorderService.calculateBoxOffice();
+        return boxOfficeVoList;
     }
 }

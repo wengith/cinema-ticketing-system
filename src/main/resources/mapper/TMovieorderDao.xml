@@ -223,5 +223,14 @@
 
     </select>
 
+    <select id="countBoxOffice" resultType="com.zxl.vo.BoxOfficeVo">
+      select tm.movieName,
+			count(tmo.orderid) as count
+      from t_schedule ts
+      join t_moviehall tmh on ts.hallObj = tmh.movieHallId
+      join t_movie tm on ts.movieObj = tm.movieId
+      join t_movieorder tmo on tmo.scheduleObj = ts.scheduleId
+      group by  tm.movieid
+    </select>
 
 </mapper>
