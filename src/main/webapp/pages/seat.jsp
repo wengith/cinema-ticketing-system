@@ -85,6 +85,7 @@
         // 选座规则 1-都可选 2-单排单号可选 3-单排双号可选
         $seatRule = 1;
         $unchoose = [];
+        $occupancy_rate = 0;
         // Ajax
         function loadXMLDoc(){
             var xmlhttp;
@@ -108,16 +109,22 @@
                     $unavaarr.push(resText.rc);
                     // console.log($unavaarr)
 
+
                     $scheduleId = resText.scheduleId;
                     price = resText.price;
                     $seatRow = resText.rows;
                     $seatCol = resText.cols;
+                    $occupancy_rate = $seatRow*$seatCol*0.3
                     if (resText.seatRule) {
                         $seatRule = resText.seatRule;
                     }
+                    console.log('$seatRule:');
+                    console.log($seatRule);
+                    $temp_num = 0;
                     if ($seatRow > 0 && $seatCol > 0) {
                         for(var i=0;i<$seatRow;i++){
                             $map[i]="";
+                            // $temp_num = 0;
                             for(var j=0;j<=$seatCol;j++){
                                 if (j === ($seatCol/2)) {
                                     $map[i]+="_";
@@ -133,7 +140,24 @@
                                         $unchoose.push(i+1 + "_" + (j+1));
                                     }
                                 }
+                                else if ($seatRule === 4) {
+                                    if ($temp_num < $occupancy_rate){
+                                        if (j%2 !== 0) {
+                                            $unchoose.push(i+1 + "_" + (j+1));
+                                            $temp_num += 1
+                                            }
+                                        }
+                                    else {
+                                        if (j !==$seatCol){
+                                            $unchoose.push(i+1 + "_" + (j+1));
+                                        }
+                                    }
+                                }
                             }
+                            console.log('i:')
+                            console.log('tem_num:')
+                            console.log(i)
+                            console.log($temp_num)
                         }
                         for(var j=0;j<=$seatCol;j++){
                             $columns[j]="";
@@ -152,11 +176,20 @@
 
                     initSeatCharts();
                     for (var i = 0; i < $unavaarr.length; i++) {
+                        console.log('----$unavaarr开始----');
+                        console.log($unavaarr[i]);
+                        console.log(sc.get($unavaarr[i]));
                         sc.get($unavaarr[i]).status('unavailable');
+                        console.log('----$unavaarr结束----');
                     }
 
                     for (var i = 0; i < $unchoose.length; i++) {
+                        console.log('----$unchoose开始----');
+                        console.log($unchoose[i]);
+                        console.log(sc.get($unchoose[i]));
                         sc.get($unchoose[i]).status('unallowchoose');
+                        console.log('----$unchoose结束----');
+                        // sc.get($unchoose[i]).status('unallowchoose');
                     }
                 }
             };

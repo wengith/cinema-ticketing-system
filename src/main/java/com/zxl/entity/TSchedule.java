@@ -27,7 +27,7 @@ public class TSchedule implements Serializable {
     private TMovie tMovie;
 
     /**
-     * 选座规则 1-都可选 2-单排单号可选 3-单排双号可选
+     * 选座规则 1-都可选 2-单排单号可选 3-单排双号可选  4-上座率30%
      */
     private Integer seatRule;
 

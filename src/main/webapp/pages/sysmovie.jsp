@@ -177,6 +177,7 @@
                                             <input type="radio" name="seatRule" value="1">全部可选
                                             <input type="radio" name="seatRule" value="2">单排单数可选
                                             <input type="radio" name="seatRule" value="3">单排双数可选
+                                            <input type="radio" name="seatRule" value="4">上座率30%
                                         </div>
                                     </div>
                                     <div class="layui-form-item">
